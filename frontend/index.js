@@ -10,7 +10,7 @@ const socket = io("http://127.0.0.1:5000/", {
 })
 
 socket.on("init", handleInit);
-socket.on("gameStart", handleGameStart)
+socket.on("gameState", handleGameState)
 socket.on("gameOver", handleGameOver)
 socket.on("unknownCode", handleUnknownCode)
 socket.on("gameCode", handleGameCode)
@@ -90,7 +90,7 @@ function handleInit(num) {
     playerNumber = num
 }
 
-function handleGameStart(gameState) {
+function handleGameState(gameState) {
     if(!gameActive){
         return
     }
@@ -111,6 +111,10 @@ function handleGameOver(data) {
     }else{
         alert("You Lost")
     }
+    setTimeout(() => {
+        reset()
+        
+    }, 1000);
 }
 
 function handleGameCode(gameCode) {
