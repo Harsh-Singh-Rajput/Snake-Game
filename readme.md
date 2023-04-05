@@ -1,4 +1,4 @@
-# Tic-Tac-Toe
+# Snake-Game
 
 This is a classic Snake game implemented in JavaScript. The player controls a snake that moves around the screen, trying to eat food while avoiding collision with its own body.
 It is an online game where two players can rival each other, last standing player wins!!!
